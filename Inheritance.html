@@ -1,0 +1,23 @@
+<script>
+    // single level inheritance
+    class a{
+        myfun1(){
+            console.log("class a");
+        }
+    }
+    class b extends a{
+        myfun2(){
+            console.log("class b");
+
+        }
+        myfun1(){
+            super.myfun1();                   // super keyword is use to access member from parent class                      
+            console.log("class b of myfun1");        // function (method) overriding
+        }
+    
+    }
+    var rec = new b
+    console.log(rec);
+    rec.myfun1();
+    rec.myfun2();
+</script>

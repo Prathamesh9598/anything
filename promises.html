@@ -1,0 +1,17 @@
+<script>
+    var record = new Promise((res,rej)=>{            // promise - class in js to perform asynchrons porations
+        console.log(typeof res,typeof rej);           // three status = resolved or rejected not pending
+       // res("Completed")
+        rej("Incompleted")
+    })   
+    console.log(record);
+    record.then((value)=>{   // handle resolved values
+
+        console.log(value);
+    }).catch((error=>{
+        console.log(error);
+    }).finally(()=>{
+        console.log("procced fro next task");
+    })
+    )
+</script>
